@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootMatchDetailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/flavium_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvMatchTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titan Strikers vs Blaze Warriors"
+            android:textColor="@color/flavium_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMatchSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Cricket (Boys) • Pool A - Round 1 • 8 Overs Match"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Scores Entry -->
+        <TextView
+            android:id="@+id/tvTeam1Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Team 1 Score:"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etScore1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="e.g. 68/4 (8.0 ov) or 2 goals or 21-18"
+            android:inputType="text"
+            android:paddingHorizontal="12dp" />
+
+        <TextView
+            android:id="@+id/tvTeam2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Team 2 Score:"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etScore2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="e.g. 65/6 (8.0 ov) or 1 goal or 19-21"
+            android:inputType="text"
+            android:paddingHorizontal="12dp" />
+
+        <!-- Syllabus Topic: Date and Time Picker Widgets -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Match Schedule (Date &amp; Time):"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="Select Date" />
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="Select Time" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvScheduledDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Not set"
+            android:textColor="@color/flavium_primary"
+            android:textSize="13sp" />
+
+        <!-- Declare Winner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Declare Match Outcome *"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgWinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbTeam1Wins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Winner: Team 1"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbTeam2Wins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Winner: Team 2"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbDraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Draw / Tie / Shared Points"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <!-- Match Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Match Notes / Highlights"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/edit_text"
+            android:gravity="top|start"
+            android:hint="e.g. Won by 3 runs, Player of the match: Player 01"
+            android:inputType="textMultiLine"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnSaveResult"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:text="Save Match Result"
+            android:textSize="15sp"
+            android:backgroundTint="@color/flavium_primary" />
+
+    </LinearLayout>
+</ScrollView>

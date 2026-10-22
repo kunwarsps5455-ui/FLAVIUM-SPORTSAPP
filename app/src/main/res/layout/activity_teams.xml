@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootTeamsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top Action Button -->
+    <Button
+        android:id="@+id/btnAddTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Register New Team"
+        android:backgroundTint="@color/flavium_primary" />
+
+    <!-- Filter by Sport -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Filter by Sport:"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerSports"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Filter by Gender -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Filter by Division:"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgGenderFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="All" />
+
+        <RadioButton
+            android:id="@+id/rbBoys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Boys"
+            android:textColor="@color/boys_blue" />
+
+        <RadioButton
+            android:id="@+id/rbGirls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Girls"
+            android:textColor="@color/girls_pink" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvTeamCountHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Showing Teams"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <!-- Syllabus Topic: ListView -->
+    <ListView
+        android:id="@+id/lvTeams"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@+id/tvEmptyTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No teams registered yet.\nTap '+ Register New Team' above."
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Standard AppCompat theme taught in college coursework -->
+    <style name="Theme.FlaviumSportsApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/flavium_primary</item>
+        <item name="colorPrimaryDark">@color/flavium_primary_dark</item>
+        <item name="colorAccent">@color/flavium_accent</item>
+    </style>
+</resources>
